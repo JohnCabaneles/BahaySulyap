@@ -6,12 +6,21 @@
 }
 
     nav {
+        padding:20px 50px;
+        position: relative;
+    }
+
+    nav .nav-links {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        background-color: #d9d9d9;
-        padding:20px 50px;
-        
+    }
+
+    nav img {
+        width: 100px;
+        height: 30px;
+        position: absolute;
+        top: 20px;
     }
 
     nav li {
@@ -22,40 +31,71 @@
     nav a {
         color:black;
         text-decoration: none;
+        padding-bottom:10px;
     }
 
     nav a:hover {
-        color: red;
+        border-bottom:2px solid #333;
     }
 
 #hero {
+    background:url('/img/hero.jpg') no-repeat center center/cover;
+    position: relative;
+    height: 100vh;
+}
+
+#hero::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all .2s linear;
+}
+
+#hero .section-img img {
+    width: 100vw;
     height: 750px;
-    background-color: #333;
+}
+
+#hero .text {
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 750px;
+    width: 100vw;
+    
 }
 
     #hero h1 {
         text-align: center;
         font-size: 48px;       
-        color: #fff;
         padding-top:300px;
+        color:#fff;
     }
 
     #hero a {
-        text-decoration: none;
-        color: black;
         width: 120px;
         display: block;
         text-align: center;
         margin: auto;
         margin-top: 20px;
-        padding:10px 20px;
-        background: white;
     }
 
-    #hero a:hover {
-        color:red;
-        background-color: aquamarine;
-        
+    #hero a img {
+        width: 100px;
+        height: 75px;
+        border-radius:20px;
+    }
+
+    #hero img:hover {
+        color:black;
+        border-radius: 30px;
     }
 
 #room {
